@@ -80,7 +80,10 @@ main .hero,
 .proxies-stats,
 .proxy-generator-inner,
 .customer-reviews-outer,
-.features {
+.features,
+.worldwide-proxies,
+.pricing,
+.footer-bottom-panel {
   max-width: 1800px;
   width: var(--primary-container-width);
   margin-inline: auto;
@@ -590,7 +593,6 @@ main .hero {
 }
 .features .feature {
   background-color: rgb(247, 249, 252);
-  aspect-ratio: 1/1;
   padding: 40px;
   border-radius: 20px;
 }
@@ -604,6 +606,157 @@ main .hero {
 }
 .features .feature p {
   color: var(--lighter-grey);
+}
+
+.worldwide-proxies {
+  margin-top: 100px;
+  color: var(--dark-blue);
+}
+.worldwide-proxies h2 {
+  font-weight: 600;
+}
+.worldwide-proxies .worldwide-proxies-countries {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.worldwide-proxies .worldwide-proxies-countries .proxy-country {
+  background-color: rgb(247, 249, 252);
+}
+.worldwide-proxies .worldwide-proxies-countries .proxy-country.proxy-country-germany {
+  display: none !important;
+}
+.worldwide-proxies .worldwide-proxies-countries .proxy-country p {
+  color: var(--lighter-grey);
+}
+
+.pricing {
+  color: var(--dark-blue);
+  margin-top: 100px;
+}
+.pricing h2 {
+  font-weight: 600;
+}
+.pricing .pricing-table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
+  gap: 20px;
+}
+.pricing .pricing-table .pricing-table-column {
+  border: 1.5px solid rgb(230, 233, 239);
+}
+.pricing .pricing-table .pricing-table-column .pricing-table-column-header {
+  min-height: 90px;
+  background-color: rgb(247, 249, 252);
+}
+.pricing .pricing-table .pricing-table-column .pricing-table-column-header.column-header-1 {
+  background-color: rgb(233, 229, 248);
+}
+.pricing .pricing-table .pricing-table-column .pricing-table-column-header.column-header-2 {
+  background-color: rgb(255, 225, 204);
+}
+.pricing .pricing-table .pricing-table-column .pricing-table-column-header.column-header-3 {
+  background-color: rgb(233, 229, 248);
+}
+.pricing .pricing-table .pricing-table-column .pricing-table-column-header img {
+  max-width: 100px;
+}
+.pricing .pricing-table .pricing-table-column .pricing-table-column-cells .pricing-table-column-cell {
+  min-height: 90px;
+}
+.pricing .pricing-table .pricing-table-column .pricing-table-column-cells .pricing-table-column-cell:not(:last-child) {
+  border-bottom: 1px solid rgb(230, 233, 239);
+}
+.pricing .pricing-table .pricing-table-column .pricing-table-column-cells .pricing-table-column-cell.last-column-cell {
+  border-bottom: 0;
+}
+
+.faqs {
+  max-width: 1400px;
+  margin-inline: auto;
+  color: var(--dark-blue);
+  margin-top: 100px;
+}
+.faqs h2 {
+  font-weight: 600;
+}
+.faqs .faqs-qnas .faqs-qna {
+  border: 1.5px solid rgb(230, 233, 239);
+}
+
+footer {
+  margin-top: 150px;
+  background-image: url(../images/footer-main-bg.png);
+  background-size: 100% auto;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+footer .footer-wrapper {
+  margin-inline: auto;
+  padding-inline: 80px;
+  max-width: 1800px;
+  width: var(--primary-container-width);
+}
+footer .footer-wrapper .footer-top-panel {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-color: rgb(253, 231, 215);
+  overflow: hidden;
+}
+footer .footer-wrapper .footer-top-panel h3 {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  font-weight: 500;
+}
+footer .footer-wrapper .footer-top-panel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+footer .footer-wrapper .footer-main-panel {
+  margin: 80px 0 90px 0;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+footer .footer-wrapper .footer-main-panel .footer-main-panel-col a {
+  color: white;
+  text-decoration: none;
+}
+footer .footer-wrapper .footer-main-panel .footer-main-panel-col a img {
+  max-width: 25px;
+}
+footer .footer-wrapper .footer-main-panel .footer-main-panel-col a .footer-social-media-links img {
+  width: 25px;
+}
+footer .footer-wrapper .footer-main-panel .footer-main-panel-col select {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  max-width: 180px;
+  padding-block: 12px;
+  border: none;
+}
+footer .footer-wrapper .footer-main-panel .footer-main-panel-col select option {
+  background-color: grey;
+}
+footer .footer-bottom-panel {
+  padding: 30px 0 80px 0;
+  border-top: 1px solid rgb(208, 204, 219);
+}
+footer .footer-bottom-panel > div:nth-child(1) a {
+  color: white;
+  text-decoration: none;
+}
+footer .footer-bottom-panel > div:nth-child(2) {
+  gap: 10px;
+}
+footer .footer-bottom-panel img {
+  max-width: 70px !important;
 }
 
 @media (width <= 1919px) {
@@ -693,6 +846,21 @@ main .hero {
   .customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews {
     width: calc(var(--primary-container-width) + 90px) !important;
   }
+  .features .feature {
+    aspect-ratio: 1/1;
+  }
+  .worldwide-proxies .worldwide-proxies-countries {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .worldwide-proxies .worldwide-proxies-countries .proxy-country {
+    background-color: rgb(247, 249, 252);
+  }
+  .worldwide-proxies .worldwide-proxies-countries .proxy-country.proxy-country-germany {
+    display: flex !important;
+  }
+  .faqs {
+    width: 70%;
+  }
 }
 @media (width <= 1100px) {
   :root {
@@ -756,6 +924,16 @@ main .hero {
   }
   .proxies-uses .proxies-uses-inner .proxy-uses-cards .proxy-uses-cards-inner .proxy-use-card:nth-of-type(2n) {
     margin-top: 0;
+  }
+  footer .footer-main-panel {
+    grid-template-columns: 1fr 1fr;
+  }
+  footer .footer-bottom-panel {
+    gap: 10px;
+    flex-direction: column;
+  }
+  footer .footer-bottom-panel img {
+    max-width: 40px;
   }
 }
 @media (width <= 768px) {
@@ -857,6 +1035,15 @@ main .hero {
     min-width: 300px;
     align-self: stretch;
   }
+  .worldwide-proxies .worldwide-proxies-countries {
+    grid-template-columns: 1fr;
+  }
+  .pricing .pricing-table {
+    grid-template-columns: 1fr;
+  }
+  .faqs {
+    width: var(--primary-container-width);
+  }
 }
 @media (width <= 500px) {
   .proxy-generator .proxy-generator-inner .proxy-generator-form-panel h4,
@@ -873,6 +1060,9 @@ main .hero {
   .proxy-generator .proxy-generator-inner .proxy-generator-form-panel button,
   .proxy-generator .proxy-generator-inner .proxy-generator-form-panel input {
     padding: 5px 2px;
+  }
+  footer .footer-bottom-panel img {
+    max-width: 40px !important;
   }
 }
 @media (width > 768px) {
